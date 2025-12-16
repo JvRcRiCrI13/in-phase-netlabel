@@ -4,6 +4,11 @@ Plataforma web oficial para **In Phase**, un sello discográfico dedicado a la m
 
 🚧 **Estado del proyecto:** En desarrollo (Work in Progress)
 
+## 🌐 Demo en Vivo
+
+¡Explora la experiencia completa y sumérgete en el sonido aquí!
+👉 **[in-phase-netlabel.vercel.app](https://in-phase-netlabel.vercel.app/)**
+
 ## 🌟 Características Clave
 
 * **Navegación Fluida:** Arquitectura SPA (Single Page Application) utilizando Next.js.
