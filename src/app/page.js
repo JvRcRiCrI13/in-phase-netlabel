@@ -27,11 +27,30 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 bg-white">
-                <section className="flex justify-between flex-col">
-                    <h2 className="text-6xl font-bold tracking-tighter text-black sm:text-5xl mb-6animate-pulse-slow">
+                <section className="flex flex-col items-start text-left w-full">
+                    <h2 className="w-full flex items-center justify-center text-6xl font-bold tracking-tighter text-black sm:text-5xl mb-6 animate-pulse-slow">
                         EQUIPO IN-PHASE
                     </h2>
-                    <p className="text-sl text-black tracking-wide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <div className="w-full flex flex-row flex-wrap justify-center gap-8 mt-8 mb-12">
+                        {[
+                            { id: 1, role: 'PRODUCER' },
+                            { id: 2, role: 'VISUAL ARTIST' },
+                            { id: 3, role: 'SOUND ENGINEER' }
+                        ].map((member) => (
+                            <div key={member.id} className="group relative w-[240px] h-[240px] overflow-hidden rounded-full bg-neutral-900 border border-white/10 shrink-0">
+                                <img
+                                    src={`/images/team_member_${member.id}.png`}
+                                    alt={`Team Member ${member.id}`}
+                                    className="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 grayscale group-hover:grayscale-0"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+                                    <p className="text-brand-cyan font-bold tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{member.role}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <h3 className="flex justify-center w-full text-2xl font-bold items-center tracking-tighter text-black sm:text-3xl mb-6 animate-pulse-slow">Quiénes somos</h3>
+                    <p className="w-full text-center text-lg text-black tracking-wide">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </section>
             </div>
         </main>
