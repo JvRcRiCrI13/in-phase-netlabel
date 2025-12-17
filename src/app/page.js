@@ -64,6 +64,45 @@ export default function Home() {
                     </section>
                 </div>
             </div>
+
+            <div className="relative z-10 w-full py-24 bg-black">
+                <div className="mx-auto max-w-3xl px-6">
+                    <section className="flex flex-col items-center w-full">
+                        <h2 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl mb-12 animate-pulse-slow">
+                            CONTACTO
+                        </h2>
+                        <form className="w-full space-y-6">
+                            <div className="group relative">
+                                <input
+                                    type="text"
+                                    placeholder="Nombre"
+                                    className="w-full bg-neutral-900/50 border border-white/10 rounded-lg px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan/50 focus:bg-neutral-900 transition-all duration-300"
+                                />
+                                <div className="absolute inset-0 rounded-lg bg-brand-cyan/5 opacity-0 pointer-events-none group-focus-within:opacity-100 transition-opacity duration-300" />
+                            </div>
+                            <div className="group relative">
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    className="w-full bg-neutral-900/50 border border-white/10 rounded-lg px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan/50 focus:bg-neutral-900 transition-all duration-300"
+                                />
+                                <div className="absolute inset-0 rounded-lg bg-brand-cyan/5 opacity-0 pointer-events-none group-focus-within:opacity-100 transition-opacity duration-300" />
+                            </div>
+                            <div className="group relative">
+                                <textarea
+                                    placeholder="Mensaje"
+                                    rows={4}
+                                    className="w-full bg-neutral-900/50 border border-white/10 rounded-lg px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan/50 focus:bg-neutral-900 transition-all duration-300 resize-none"
+                                />
+                                <div className="absolute inset-0 rounded-lg bg-brand-cyan/5 opacity-0 pointer-events-none group-focus-within:opacity-100 transition-opacity duration-300" />
+                            </div>
+                            <button className="w-full py-4 bg-white text-black font-bold tracking-widest hover:bg-brand-cyan hover:text-white transition-colors duration-300 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(56,189,248,0.4)]">
+                                ENVIAR
+                            </button>
+                        </form>
+                    </section>
+                </div>
+            </div>
         </main>
 
     )

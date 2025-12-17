@@ -28,6 +28,7 @@ export default function Navbar() {
 
     const navItems = [
         { name: "Home", path: "/" },
+        { name: "Proyectos", path: "/proyectos" },
         { name: "Artistas", path: "/artistas" },
         { name: "Lanzamientos", path: "/lanzamientos" },
         { name: "Merch", path: "/merch" }
