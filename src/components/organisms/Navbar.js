@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
-import Logo from "./Logo";
+import Logo from "../atoms/Logo";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
 
     const navItems = [
         { name: "Home", path: "/" },
-        { name: "Proyectos", path: "/proyectos" },
+        { name: "Proyectos", path: "/catalogo" },
         { name: "Artistas", path: "/artistas" },
         { name: "Lanzamientos", path: "/lanzamientos" },
         { name: "Merch", path: "/merch" }
@@ -41,7 +41,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
                         <Link href="/" className="flex-shrink-0 flex items-center gap-0 group z-50">
-                            <Logo className="w-48 h-48 sm:w-60 sm:h-60 -ml-4 sm:-ml-3 text-white group-hover:text-brand-cyan transition-colors duration-300" />
+                            <Logo className="w-56 h-56 text-white group-hover:text-brand-cyan transition-colors duration-300" />
                         </Link>
 
                         {/* Desktop Navigation */}

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
     return (
         <main className="bg-black min-h-screen">
@@ -28,10 +30,13 @@ export default function Home() {
                             <br />
                             <span className="text-brand-cyan">Explora lo desconocido.</span>
                         </p>
-                        <button className="group relative px-8 py-4 bg-brand-magenta text-white font-bold rounded-full shadow-[0_0_20px_rgba(192,38,211,0.5)] hover:shadow-[0_0_30px_rgba(192,38,211,0.8)] transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden">
+                        <Link
+                            href="/catalogo"
+                            className="group relative inline-block px-8 py-4 bg-brand-magenta text-white font-bold rounded-full shadow-[0_0_20px_rgba(192,38,211,0.5)] hover:shadow-[0_0_30px_rgba(192,38,211,0.8)] transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
+                        >
                             <span className="relative z-10">EXPLORAR CATÁLOGO</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-brand-magenta to-brand-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </button>
+                        </Link>
                     </section>
                 </div>
             </div>

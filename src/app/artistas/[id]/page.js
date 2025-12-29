@@ -1,7 +1,7 @@
 import { getArtistById } from '@/lib/data';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import TrackList from '@/components/TrackList';
+import TrackList from '@/components/organisms/TrackList';
 
 export async function generateMetadata({ params }) {
     const { id } = await params;

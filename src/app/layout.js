@@ -1,8 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { PlayerProvider } from '@/context/PlayerContext'
-import Player from '@/components/Player'
-import Navbar from '@/components/Navbar'
+import Player from '@/components/organisms/Player'
+import Navbar from '@/components/organisms/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 

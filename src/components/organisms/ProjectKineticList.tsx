@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '@/types/projects';
+import Link from 'next/link';
 import Image from 'next/image';
 
 interface ProjectKineticListProps {
@@ -32,19 +33,21 @@ export default function ProjectKineticList({ projects }: ProjectKineticListProps
                         onMouseEnter={() => setHoveredProject(project.id)}
                         onMouseLeave={() => setHoveredProject(null)}
                         className={`
-                            border-b border-white/10 py-8 px-4 flex justify-between items-center 
+                            border-b border-white/10 flex justify-between items-center 
                             cursor-pointer transition-all duration-300
                             ${hoveredProject && hoveredProject !== project.id ? 'opacity-30 blur-[1px]' : 'opacity-100'}
                             hover:pl-8 hover:bg-white/5
                         `}
                     >
-                        <span className="text-4xl md:text-5xl font-bold text-white tracking-tighter uppercase">
-                            {project.title}
-                        </span>
-                        <div className="text-right flex flex-col items-end">
-                            <span className="text-sm font-mono text-brand-cyan mb-1">{project.category}</span>
-                            <span className="text-sm text-gray-400">{project.client_or_artist}</span>
-                        </div>
+                        <Link href={`/catalogo/${project.slug}`} className="flex justify-between items-center w-full py-8 px-4">
+                            <span className="text-4xl md:text-5xl font-bold text-white tracking-tighter uppercase">
+                                {project.title}
+                            </span>
+                            <div className="text-right flex flex-col items-end">
+                                <span className="text-sm font-mono text-brand-cyan mb-1">{project.category}</span>
+                                <span className="text-sm text-gray-400">{project.artistOrClient}</span>
+                            </div>
+                        </Link>
                     </li>
                 ))}
             </ul>
