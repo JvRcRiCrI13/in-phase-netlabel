@@ -41,7 +41,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
                         <Link href="/" className="flex-shrink-0 flex items-center gap-0 group z-50">
-                            <Logo className="w-56 h-56 text-white group-hover:text-brand-cyan transition-colors duration-300" />
+                            <Logo className="w-auto h-10 sm:h-12 text-white group-hover:text-brand-cyan transition-colors duration-300" />
                         </Link>
 
                         {/* Desktop Navigation */}

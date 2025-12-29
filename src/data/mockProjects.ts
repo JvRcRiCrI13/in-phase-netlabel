@@ -9,7 +9,7 @@ export const projects: Project[] = [
     year: '2024',
     category: 'Audio',
     coverImage: '/images/releases/void-cover.png',
-    videoPreview: '/videos/void-loop.webm',
+    // videoPreview: '/videos/void-loop.webm',
     gridSize: 'large',
     role: 'Full Production',
     description: 'Un viaje sonoro a través de frecuencias sub-graves y texturas granulares.',
