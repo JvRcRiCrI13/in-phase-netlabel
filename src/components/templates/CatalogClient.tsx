@@ -8,6 +8,10 @@ import ViewToggle from '@/components/molecules/ViewToggle';
 import { ProjectCategory, Project } from '@/types/projects';
 import { motion, AnimatePresence } from 'framer-motion';
 
+interface CatalogClientProps {
+    initialProjects: Project[];
+}
+
 export default function CatalogClient({ initialProjects }: CatalogClientProps) {
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
     const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | 'All'>('All');
@@ -31,7 +35,7 @@ export default function CatalogClient({ initialProjects }: CatalogClientProps) {
                             onSelectCategory={setSelectedCategory}
                         />
                     </div>
-                    <ViewToggle viewMode={viewMode} setViewMode={setViewMode} />
+                    <ViewToggle viewMode={viewMode} onToggle={setViewMode} />
                 </div>
 
                 {/* Content */}
