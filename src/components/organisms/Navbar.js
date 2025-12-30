@@ -40,7 +40,7 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
-                        <Link href="/" className="flex-shrink-0 flex items-center gap-0 group z-50 -ml-6 md:ml-0">
+                        <Link href="/" className="flex-shrink-0 flex items-center gap-0 group z-50 -ml-14 md:ml-0">
                             <Logo className="w-48 h-48 md:w-56 md:h-56 text-white group-hover:text-brand-cyan transition-colors duration-300" />
                         </Link>
 
