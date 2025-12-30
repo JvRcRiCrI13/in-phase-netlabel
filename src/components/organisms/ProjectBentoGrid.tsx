@@ -32,7 +32,9 @@ export default function ProjectBentoGrid({ projects }: ProjectBentoGridProps) {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4, delay: i * 0.05 }}
                         className={`
-                            relative group overflow-hidden rounded-xl border border-white/10
+                            relative group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all duration-500
+                            hover:border-brand-cyan/50 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:-translate-y-1
+                            active:duration-200 active:border-brand-cyan active:shadow-[0_0_30px_rgba(56,189,248,0.4)] active:scale-95
                             ${sizeClasses}
                         `}
                     >
@@ -43,7 +45,7 @@ export default function ProjectBentoGrid({ projects }: ProjectBentoGridProps) {
                                     src={project.coverImage}
                                     alt={project.title}
                                     fill
-                                    className="object-cover opacity-60 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
+                                    className="object-cover opacity-60 group-hover:opacity-40 group-hover:scale-110 group-hover:brightness-110 transition-all duration-700 group-active:duration-200 group-active:scale-115 group-active:brightness-125"
                                 />
                             </div>
 
