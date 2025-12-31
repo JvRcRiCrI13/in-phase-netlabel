@@ -4,6 +4,8 @@ import { Project } from '@/types/projects';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const MotionLink = motion(Link);
+
 interface ProjectBentoGridProps {
     projects: Project[];
 }
@@ -26,41 +28,39 @@ export default function ProjectBentoGrid({ projects }: ProjectBentoGridProps) {
                 }[project.gridSize || 'small'];
 
                 return (
-                    <motion.div
+                return (
+                    <MotionLink
                         key={project.id}
+                        href={`/catalogo/${project.slug}`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4, delay: i * 0.05 }}
-                        className={`${sizeClasses}`}
+                        className={`group block w-full h-full relative overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-brand-cyan/50 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:-translate-y-1 active:duration-75 active:border-brand-cyan active:shadow-[0_0_30px_rgba(56,189,248,0.4)] active:scale-95 ${sizeClasses}`}
                     >
-                        <Link
-                            href={`/catalogo/${project.slug}`}
-                            className="group block w-full h-full relative overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-brand-cyan/50 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:-translate-y-1 active:duration-75 active:border-brand-cyan active:shadow-[0_0_30px_rgba(56,189,248,0.4)] active:scale-95"
-                        >
-                            {/* Background Image */}
-                            <div className="absolute inset-0 bg-neutral-900">
-                                <Image
-                                    src={project.coverImage}
-                                    alt={project.title}
-                                    fill
-                                    className="object-cover opacity-60 group-hover:opacity-40 group-hover:scale-110 group-hover:brightness-110 transition-all duration-700 group-active:duration-75 group-active:scale-115 group-active:brightness-125"
-                                />
-                            </div>
+                        {/* Background Image */}
+                        <div className="absolute inset-0 bg-neutral-900">
+                            <Image
+                                src={project.coverImage}
+                                alt={project.title}
+                                fill
+                                className="object-cover opacity-60 group-hover:opacity-40 group-hover:scale-110 group-hover:brightness-110 transition-all duration-700 group-active:duration-75 group-active:scale-115 group-active:brightness-125"
+                            />
+                        </div>
 
-                            {/* Content Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-6 flex flex-col justify-end">
-                                <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                    <span className="inline-block px-2 py-1 mb-2 text-xs font-mono text-brand-cyan border border-brand-cyan/30 rounded backdrop-blur-sm">
-                                        {project.category}
-                                    </span>
-                                    <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
-                                    <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                        {project.artistOrClient} • {project.year}
-                                    </p>
-                                </div>
+                        {/* Content Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-6 flex flex-col justify-end">
+                            <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span className="inline-block px-2 py-1 mb-2 text-xs font-mono text-brand-cyan border border-brand-cyan/30 rounded backdrop-blur-sm">
+                                    {project.category}
+                                </span>
+                                <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
+                                <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                    {project.artistOrClient} • {project.year}
+                                </p>
                             </div>
-                        </Link>
-                    </motion.div>
+                        </div>
+                    </MotionLink>
+                );
                 );
             })}
         </div>
