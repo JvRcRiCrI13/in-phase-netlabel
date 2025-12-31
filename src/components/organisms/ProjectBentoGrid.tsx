@@ -28,7 +28,6 @@ export default function ProjectBentoGrid({ projects }: ProjectBentoGridProps) {
                 }[project.gridSize || 'small'];
 
                 return (
-                return (
                     <motion.div
                         key={project.id}
                         initial={{ opacity: 0, scale: 0.9 }}
