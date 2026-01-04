@@ -129,32 +129,34 @@ export default function Player() {
             {/* Background Glow Effect */}
             <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-cyan/20 to-transparent transition-opacity duration-1000 ${isPlaying ? 'opacity-100' : 'opacity-0'}`} />
 
-            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 relative">
+            <div className="mx-auto flex flex-col md:flex-row h-auto md:h-20 max-w-7xl items-center justify-between px-6 py-3 md:py-0 relative gap-2 md:gap-0">
 
                 {/* Info de la canción + Visualizer */}
-                <div className="flex items-center gap-4 w-1/3 md:w-1/4">
-                    {/* Fake Waveform Visualizer */}
-                    <div className="flex items-end gap-1 h-8 mb-1">
-                        {[...Array(4)].map((_, i) => (
-                            <div
-                                key={i}
-                                className={`w-1 rounded-full bg-brand-cyan transition-all duration-500 ${isPlaying ? 'animate-pulse' : 'h-1 opacity-30'}`}
-                                style={{
-                                    height: isPlaying ? `${Math.random() * 100}%` : '4px',
-                                    animationDelay: `${i * 0.1}s`,
-                                    animationDuration: '0.6s'
-                                }}
-                            />
-                        ))}
-                    </div>
-                    <div className="flex flex-col overflow-hidden">
-                        <span className="text-sm font-bold text-white truncate drop-shadow-md">{currentTrack.title}</span>
-                        <span className="text-xs text-brand-cyan/80 truncate font-mono">{currentTrack.artist || "Unknown Artist"}</span>
+                <div className="flex items-center justify-start md:w-1/4 w-full gap-4 pl-2 md:pl-0">
+                    <div className="flex items-center gap-3 w-full md:w-auto overflow-hidden">
+                        {/* Fake Waveform Visualizer */}
+                        <div className="flex items-end gap-1 h-6 md:h-8 mb-0.5 flex-shrink-0">
+                            {[...Array(4)].map((_, i) => (
+                                <div
+                                    key={i}
+                                    className={`w-1 rounded-full bg-brand-cyan transition-all duration-500 ${isPlaying ? 'animate-pulse' : 'h-1 opacity-30'}`}
+                                    style={{
+                                        height: isPlaying ? `${Math.random() * 100}%` : '4px',
+                                        animationDelay: `${i * 0.1}s`,
+                                        animationDuration: '0.6s'
+                                    }}
+                                />
+                            ))}
+                        </div>
+                        <div className="flex flex-col overflow-hidden">
+                            <span className="text-sm font-bold text-white truncate drop-shadow-md">{currentTrack.title}</span>
+                            <span className="text-xs text-brand-cyan/80 truncate font-mono">{currentTrack.artist || "Unknown Artist"}</span>
+                        </div>
                     </div>
                 </div>
 
                 {/* Centro: Botones */}
-                <div className="flex items-center justify-center flex-1 md:flex-none md:w-1/3 gap-4 md:gap-8">
+                <div className="flex items-center justify-center w-full md:w-1/3 gap-8 md:gap-8 pb-1 md:pb-0">
                     <button
                         onClick={handlePrevious}
                         disabled={!hasPrevious && (!audioRef.current || audioRef.current.currentTime <= 2)}

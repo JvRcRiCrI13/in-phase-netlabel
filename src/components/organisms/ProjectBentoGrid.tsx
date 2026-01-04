@@ -56,7 +56,7 @@ export default function ProjectBentoGrid({ projects }: ProjectBentoGridProps) {
                                     <span className="inline-block px-2 py-1 mb-2 text-xs font-mono text-brand-cyan border border-brand-cyan/30 rounded backdrop-blur-sm">
                                         {project.category}
                                     </span>
-                                    <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
+                                    <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-brand-cyan group-active:text-brand-cyan transition-colors duration-300">{project.title}</h3>
                                     <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                                         {project.artistOrClient} • {project.year}
                                     </p>
