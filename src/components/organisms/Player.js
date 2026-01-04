@@ -131,11 +131,11 @@ export default function Player() {
 
             <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 relative">
 
-                {/* --- MOBILE LAYOUT (V3 Dashboard) --- */}
-                <div className="flex md:hidden w-full items-center justify-between gap-4">
+                {/* --- MOBILE LAYOUT (V4: Absolute Centering) --- */}
+                <div className="relative w-full h-full flex md:hidden items-center">
 
-                    {/* 1. Left: Visualizer Only */}
-                    <div className="flex items-end gap-1 h-6 flex-shrink-0 w-12">
+                    {/* 1. Left: Visualizer (Absolute Start) */}
+                    <div className="absolute left-0 flex items-end gap-1 h-6 w-auto z-10">
                         {[...Array(4)].map((_, i) => (
                             <div
                                 key={i}
@@ -149,8 +149,8 @@ export default function Player() {
                         ))}
                     </div>
 
-                    {/* 2. Center: Controls (Compacted) */}
-                    <div className="flex items-center gap-6 flex-shrink-0">
+                    {/* 2. Center: Controls (Absolute Center - Unmovable) */}
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-6 z-20">
                         <button
                             onClick={handlePrevious}
                             disabled={!hasPrevious && (!audioRef.current || audioRef.current.currentTime <= 2)}
@@ -187,10 +187,10 @@ export default function Player() {
                         </button>
                     </div>
 
-                    {/* 3. Right: Marquee Text */}
-                    <div className="flex-1 overflow-hidden h-full flex items-center relative mask-linear-fade">
-                        <div className="whitespace-nowrap animate-[marquee_10s_linear_infinite] px-4">
-                            <span className="text-sm font-bold text-white mr-4">{currentTrack.title}</span>
+                    {/* 3. Right: Marquee Text (Absolute Right with Width Limit) */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[25%] overflow-hidden flex items-center justify-end z-10 mask-linear-fade h-full">
+                        <div className="whitespace-nowrap animate-[marquee_10s_linear_infinite] px-1 flex items-center justify-end">
+                            <span className="text-sm font-bold text-white mr-2">{currentTrack.title}</span>
                             <span className="text-xs text-brand-cyan font-mono">{currentTrack.artist}</span>
                         </div>
                     </div>
