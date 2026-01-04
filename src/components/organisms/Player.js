@@ -154,7 +154,7 @@ export default function Player() {
                 </div>
 
                 {/* Centro: Botones */}
-                <div className="flex items-center justify-center w-1/3 gap-8">
+                <div className="flex items-center justify-center flex-1 md:flex-none md:w-1/3 gap-4 md:gap-8">
                     <button
                         onClick={handlePrevious}
                         disabled={!hasPrevious && (!audioRef.current || audioRef.current.currentTime <= 2)}
@@ -167,7 +167,7 @@ export default function Player() {
 
                     <button
                         onClick={togglePlay}
-                        className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
+                        className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
                     >
                         {isPlaying ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
