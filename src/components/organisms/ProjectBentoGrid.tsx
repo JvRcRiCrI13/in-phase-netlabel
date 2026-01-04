@@ -38,7 +38,7 @@ export default function ProjectBentoGrid({ projects }: ProjectBentoGridProps) {
                     >
                         <Link
                             href={`/catalogo/${project.slug}`}
-                            className="group block w-full h-full relative overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all duration-500 hover:border-brand-cyan/50 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:-translate-y-1 active:duration-200 active:border-brand-cyan active:shadow-[0_0_30px_rgba(56,189,248,0.4)] active:scale-95"
+                            className="group block w-full h-full relative overflow-hidden rounded-xl bg-white/5 border border-white/10 transition-all duration-500 hover:border-brand-cyan/50 hover:shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:-translate-y-1 active:duration-200 active:border-brand-cyan active:shadow-[0_0_30px_rgba(56,189,248,0.4)] active:scale-95"
                         >
                             {/* Background Image */}
                             <div className="absolute inset-0 bg-neutral-900">
