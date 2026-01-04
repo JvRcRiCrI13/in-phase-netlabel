@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Project } from '@/types/projects';
+import TrackList from '@/components/organisms/TrackList';
 
 interface ProjectDetailClientProps {
     project: Project;
@@ -67,6 +68,14 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
                         />
                     </motion.div>
                 </div>
+
+                {/* Audio Tracks Section */}
+                {project.tracks && project.tracks.length > 0 && (
+                    <div className="mb-20">
+                        <h2 className="text-2xl font-bold mb-8 border-b border-white/10 pb-4">TRACKLIST</h2>
+                        <TrackList tracks={project.tracks} />
+                    </div>
+                )}
 
                 {/* Image Gallery */}
                 <div className="mb-20">

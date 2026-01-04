@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { PlayerProvider } from '@/context/PlayerContext'
 import Player from '@/components/organisms/Player'
 import Navbar from '@/components/organisms/Navbar'
+import Footer from '@/components/organisms/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +19,10 @@ export default function RootLayout({ children }) {
                 <PlayerProvider>
                     <div className="flex min-h-screen flex-col">
                         <Navbar />
-                        <main className="flex-1 pt-20 pb-24">
+                        <main className="flex-1 pt-20 pb-0">
                             {children}
                         </main>
+                        <Footer />
                         <Player />
                     </div>
                 </PlayerProvider>

@@ -30,8 +30,8 @@ export default function Navbar() {
         { name: "Home", path: "/" },
         { name: "Proyectos", path: "/catalogo" },
         { name: "Artistas", path: "/artistas" },
-        { name: "Lanzamientos", path: "/lanzamientos" },
-        { name: "Merch", path: "/merch" }
+        // { name: "Lanzamientos", path: "/lanzamientos" },
+        // { name: "Merch", path: "/merch" }
     ];
 
     return (

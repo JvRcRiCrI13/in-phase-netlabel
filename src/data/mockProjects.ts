@@ -14,6 +14,20 @@ export const projects: Project[] = [
     role: 'Full Production',
     description: 'Un viaje sonoro a través de frecuencias sub-graves y texturas granulares.',
     slug: 'void-resonance',
+    tracks: [
+      {
+        id: 't1',
+        title: 'Sub-Grave Resonance',
+        url: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3',
+        artist: 'Tours'
+      },
+      {
+        id: 't2',
+        title: 'Granular Texture 02',
+        url: 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Elipses.mp3',
+        artist: 'Chad Crouch'
+      }
+    ]
   },
   {
     id: '2',

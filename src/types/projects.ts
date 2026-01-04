@@ -1,6 +1,13 @@
 export type GridSize = 'small' | 'medium' | 'large' | 'tall' | 'wide';
 export type ProjectCategory = 'Audio' | 'Design' | 'Visual Art' | 'Dev';
 
+export interface Track {
+    id: string;
+    title: string;
+    url: string;
+    artist?: string;
+}
+
 export interface Project {
     id: string;
     title: string;
@@ -13,4 +20,5 @@ export interface Project {
     role: string;
     description: string;
     slug: string;
+    tracks?: Track[];
 }

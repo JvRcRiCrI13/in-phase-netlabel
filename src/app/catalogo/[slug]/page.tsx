@@ -4,8 +4,8 @@ import { getProjectBySlug } from '@/data/mockProjects';
 import Link from 'next/link';
 import ProjectDetailClient from '@/components/templates/ProjectDetailClient';
 
-export default async function ProjectDetailPage({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     const project = await getProjectBySlug(slug);
 
     if (!project) {
