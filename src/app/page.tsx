@@ -28,10 +28,10 @@ export default function Home() {
             <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
                 {/* Header / Hero Text - LEGACY STYLE */}
                 <header className="mb-12 w-full text-center flex flex-col items-center justify-center pt-24 px-2">
-                    <h1 className="text-5xl font-black tracking-tighter sm:text-7xl md:text-8xl mb-0 bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-cyan to-brand-violet animate-pulse-slow leading-none">
+                    <h1 className="text-6xl font-black tracking-tighter sm:text-7xl md:text-8xl mb-0 bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-cyan to-brand-violet animate-pulse-slow leading-none whitespace-nowrap">
                         IN-PHASE
                     </h1>
-                    <h2 className="text-3xl font-bold tracking-[0.2em] sm:text-5xl md:text-6xl mb-6 text-white/90 leading-none -mt-2 sm:-mt-3 md:-mt-5 animate-pulse-slow">
+                    <h2 className="text-4xl font-bold tracking-[0.2em] sm:text-5xl md:text-6xl mb-6 text-white/90 leading-none -mt-2 sm:-mt-3 md:-mt-5 animate-pulse-slow whitespace-nowrap">
                         NETLABEL
                     </h2>
                     <p className="max-w-4xl text-sm sm:text-lg md:text-xl font-bold mb-6 tracking-[0.1em] sm:tracking-[0.3em] md:tracking-[0.5em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-400 to-white animate-pulse text-center">
