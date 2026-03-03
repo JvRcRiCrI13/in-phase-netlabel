@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
                             {children}
                         </main>
                         <Footer />
-                        <Player />
+                        {/* <Player /> Temporarily hidden per user request */}
                     </div>
                 </PlayerProvider>
             </body>

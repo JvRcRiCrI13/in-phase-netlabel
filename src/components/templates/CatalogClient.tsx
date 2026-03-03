@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import ProjectBentoGrid from '@/components/organisms/ProjectBentoGrid';
 import ProjectKineticList from '@/components/organisms/ProjectKineticList';
 import ProjectFilter from '@/components/molecules/ProjectFilter';

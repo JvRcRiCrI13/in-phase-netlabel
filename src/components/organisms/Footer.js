@@ -1,7 +1,4 @@
 import Link from 'next/link';
-// import { Github, Twitter, Instagram } from 'lucide-react'; // Example imports if using lucide-react, but we'll use SVG for now or check installed icons.
-// Checking existing imports suggests we might not have 'lucide-react' installed unless used in Navbar. Navbar uses 'Menu' from 'lucide-react', so it IS installed.
-
 import { Instagram, Mail } from 'lucide-react';
 
 export default function Footer() {
@@ -32,7 +29,7 @@ export default function Footer() {
                     </a>
 
                     <a
-                        href="mailto:contact@in-phase.cc"
+                        href="mailto:In.Phase@gmail.com"
                         className="text-gray-400 hover:text-brand-cyan transition-colors hover:scale-110 duration-300"
                     >
                         <Mail className="w-6 h-6" />

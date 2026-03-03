@@ -1,11 +1,7 @@
-// using framer-motion for smooth entry
-// Re-trigger build to ensure fresh deployment
 import { motion } from 'framer-motion';
 import { Project } from '@/types/projects';
 import Link from 'next/link';
 import Image from 'next/image';
-
-
 
 interface ProjectBentoGridProps {
     projects: Project[];
