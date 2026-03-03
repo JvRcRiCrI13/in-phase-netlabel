@@ -22,7 +22,7 @@ export default function ServicesList() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700 grayscale group-hover:grayscale-0 mix-blend-luminosity"
+                                    className="w-full h-full object-cover transition-opacity duration-700 mix-blend-luminosity opacity-60 md:opacity-40 md:group-hover:opacity-60 grayscale-0 md:grayscale md:group-hover:grayscale-0"
                                 />
                                 {/* Gradient to protect text reading (darker on left) */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
@@ -32,7 +32,7 @@ export default function ServicesList() {
                         )}
 
                         {/* Subtle Background Glow on Hover */}
-                        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0" />
+                        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[100px] transition-opacity duration-700 pointer-events-none z-0 opacity-100 md:opacity-0 md:group-hover:opacity-100" />
 
                         {/* Content Container */}
                         <div className="relative z-10 flex flex-col justify-between w-full md:w-2/3 p-8 md:p-12">
@@ -41,7 +41,7 @@ export default function ServicesList() {
                                 <span className="inline-block text-brand-cyan/60 font-mono text-sm tracking-widest mb-3 border border-brand-cyan/20 px-3 py-1 rounded-full">
                                     SERV_0{index + 1}
                                 </span>
-                                <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tighter mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-brand-cyan transition-all duration-300">
+                                <h3 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 transition-all duration-300 text-transparent bg-clip-text bg-gradient-to-r from-white to-brand-cyan md:text-white md:group-hover:text-transparent md:group-hover:bg-clip-text md:group-hover:bg-gradient-to-r md:group-hover:from-white md:group-hover:to-brand-cyan">
                                     {item.title}
                                 </h3>
                             </div>
