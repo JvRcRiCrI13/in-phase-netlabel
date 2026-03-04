@@ -29,7 +29,7 @@ export default function Navbar() {
     const navItems = [
         { name: "Home", path: "/" },
         { name: "Proyectos", path: "/catalogo" },
-        { name: "Artistas", path: "/artistas" },
+        // { name: "Artistas", path: "/artistas" }, // Hidden temporarily per user request
         // { name: "Lanzamientos", path: "/lanzamientos" },
         // { name: "Merch", path: "/merch" }
     ];
